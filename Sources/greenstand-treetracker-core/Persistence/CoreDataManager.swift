@@ -18,9 +18,9 @@ class CoreDataManager: CoreDataManaging {
 
     private lazy var persistentContainer: NSPersistentContainer = {
 
-        let bundle = Bundle(for: CoreDataManager.self)
+      let bundle = Bundle(for: CoreDataManager.self)
 
-        guard let modelURL = bundle.url(forResource: "TreeTracker", withExtension: "momd") else {
+      guard let modelURL =  bundle.url(forResource: "TreeTracker", withExtension: "momd") else {
             fatalError("Unable to load managed object model URL")
         }
 
