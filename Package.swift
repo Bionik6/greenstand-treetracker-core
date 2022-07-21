@@ -6,7 +6,7 @@ let package = Package(
   platforms: [.iOS(.v11)],
   products: [
     .library(
-      name: "greenstand-treetracker-core",
+      name: "GreenstandTreeTrackerCore",
       targets: ["greenstand-treetracker-core"]
     ),
   ],
