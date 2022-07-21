@@ -7,7 +7,7 @@ let package = Package(
   products: [
     .library(
       name: "TreeTrackerCore",
-      targets: ["greenstand-treetracker-core"]
+      targets: ["TreeTrackerCore"]
     ),
   ],
   dependencies: [
@@ -15,15 +15,15 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "greenstand-treetracker-core",
+      name: "TreeTrackerCore",
       dependencies: [
         .product(name: "AWSS3", package: "aws-sdk-ios-spm"),
       ],
       resources: [.process("Resources")]
     ),
     .testTarget(
-      name: "greenstand-treetracker-coreTests",
-      dependencies: ["greenstand-treetracker-core"]
+      name: "TreeTrackerCoreTests",
+      dependencies: ["TreeTrackerCore"]
     ),
   ]
 )

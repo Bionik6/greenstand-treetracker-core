@@ -1,4 +1,4 @@
-public struct greenstand_treetracker_core {
+public struct TreeTrackerCore {
     public private(set) var text = "Hello, World!"
 
     public init() {
