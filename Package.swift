@@ -11,9 +11,19 @@ let package = Package(
     ),
   ],
   dependencies: [
+    .package(url: "https://github.com/aws-amplify/aws-sdk-ios-spm", branch: "main"),
   ],
   targets: [
-    .target(name: "greenstand-treetracker-core", dependencies: []),
-    .testTarget(name: "greenstand-treetracker-coreTests", dependencies: ["greenstand-treetracker-core"]),
+    .target(
+      name: "greenstand-treetracker-core",
+      dependencies: [
+        .product(name: "AWSS3", package: "aws-sdk-ios-spm"),
+      ],
+      resources: [.process("Resources")]
+    ),
+    .testTarget(
+      name: "greenstand-treetracker-coreTests",
+      dependencies: ["greenstand-treetracker-core"]
+    ),
   ]
 )
