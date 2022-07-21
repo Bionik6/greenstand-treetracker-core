@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-  name: "GreenStandTreeTrackerCore",
+  name: "TreeTrackerCore",
   platforms: [.iOS(.v11)],
   products: [
     .library(
-      name: "GreenStandTreeTrackerCore",
+      name: "greenstand-treetracker-core",
       targets: ["greenstand-treetracker-core"]
     ),
   ],
